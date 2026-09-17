@@ -14,20 +14,21 @@
 ## 架构
 
 ```mermaid
-flowchart TB
-  U[用户描述故障] --> FE[React SSE]
-  FE --> API[Flask :3001]
-  API --> P[Planner]
-  P -->|普通工具| E[Executor]
-  P -->|restart_interface| H[HITL 人工确认]
-  P -->|不再调用工具| R[Reviewer]
-  H -->|同意| E
-  H -->|拒绝| X[中止]
+graph TD
+  U["用户描述故障"] --> FE["React SSE"]
+  FE --> API["Flask"]
+  API --> P["Planner"]
+  P -->|"普通工具"| E["Executor"]
+  P -->|"restart_interface"| H["HITL 人工确认"]
+  P -->|"不再调用工具"| R["Reviewer"]
+  H -->|"同意"| E
+  H -->|"拒绝"| X["中止"]
+  E --> T["原子工具"]
   E --> R
-  R -->|证据不足| P
-  R -->|enough 或步数用尽| D[诊断结论]
-  E --> T[原子工具 / 模拟库存]
+  R --> D["诊断结论"]
 ```
+
+Reviewer 证据不足且未超过最大步数时，会回到 Planner 再规划一轮（上图不画回环，避免 GitHub Mermaid 布局失败）。
 
 约定的工具串联：域名先 `dns_tool`，再用返回的 `ip` 调 `ping_tool`；`status=timeout` 时先查网卡，再把 `status` 交给日志工具。
 
