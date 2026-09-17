@@ -1,0 +1,265 @@
+:root {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #1a1a1a;
+  background: #f4f6f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px 16px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.header p,
+.sub {
+  margin: 6px 0 16px;
+  color: #666;
+  font-size: 14px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin: 8px 0 16px;
+  font-size: 14px;
+  color: #444;
+}
+
+.text-btn,
+.link-btn {
+  border: 0;
+  background: none;
+  color: #2563eb;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 360px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.auth-form input {
+  padding: 10px 12px;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.auth-form button[type="submit"] {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.user-table th,
+.user-table td {
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  padding: 8px 6px;
+}
+
+.chat {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.hint {
+  color: #888;
+  font-size: 14px;
+}
+
+.hint-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.examples {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.example-btn {
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: #334155;
+  cursor: pointer;
+}
+
+.error {
+  color: #b42318;
+  font-size: 14px;
+}
+
+.bubble {
+  margin-bottom: 16px;
+}
+
+.bubble .label {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.bubble.user .text {
+  background: #e8f1fc;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.bubble.assistant .text {
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.sources {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  font-size: 13px;
+  color: #444;
+}
+
+.preview {
+  color: #777;
+  margin-top: 4px;
+}
+
+.report {
+  margin-top: 12px;
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.report-title {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.report-body {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.bubble-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.mail-btn {
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.mail-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.mail-ok {
+  font-size: 13px;
+  color: #166534;
+}
+
+.mail-fail {
+  font-size: 13px;
+  color: #b42318;
+}
+
+.composer {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.composer input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.composer button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+}
+
+.composer button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.reject-btn {
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: #b42318;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.reject-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
